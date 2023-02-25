@@ -43,7 +43,7 @@ jobs:
           ./gradlew assembleDebug
 
           echo "Validating APKs"
-          for abi in universal arm64-v8a armeabi-v7a x86_64 x86; do
+          for abi in arm64-v8a armeabi-v7a ; do
             if ! test -f "$APK_DIR_PATH/${APK_BASENAME_PREFIX}_$abi.apk"; then
               files_found="$(ls "$APK_DIR_PATH")"
               echo "Failed to find built APK at '$APK_DIR_PATH/${APK_BASENAME_PREFIX}_$abi.apk'. Files found: "$'\n'"$files_found"
