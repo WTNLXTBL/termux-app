@@ -214,9 +214,9 @@ task downloadBootstraps() {
     doLast {
         def packageVariant = project.ext.packageVariant
         if (packageVariant == "apt-android-7") {
-            def version = "2022.04.28-r5" + "+" + packageVariant
-            downloadBootstrap("aarch64", "4a51a7eb209fe82efc24d52e3cccc13165f27377290687cb82038cbd8e948430", version)
-            downloadBootstrap("arm", "6459a786acbae50d4c8a36fa1c3de6a4dd2d482572f6d54f73274709bd627325", version)
+            def version = "2023.03.12-r1" + "+" + packageVariant
+            downloadBootstrap("aarch64", "e982ee9a0336da732c0ed959ce3264412097b7952a7fd3ed4f19d8fe93c70300", version)
+            downloadBootstrap("arm", "a8e11af98ae8aa7841d32ffdea531159657d50bd1c60fce92b1f14d6daea75c2", version)
         } else if (packageVariant == "apt-android-5") {
             def version = "2022.04.28-r6" + "+" + packageVariant
             downloadBootstrap("aarch64", "913609d439415c828c5640be1b0561467e539cb1c7080662decaaca2fb4820e7", version)
