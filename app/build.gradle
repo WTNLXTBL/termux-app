@@ -183,11 +183,9 @@ clean {
 
 task downloadBootstraps() {
     doLast {
-        def packageVariant = project.ext.packageVariant
-        if (packageVariant == "apt-android-7") {
+        def packageVariant = pacman-android-7
             def version = "2023.03.12-r1" + "+" + "pacman-android-7"
             downloadBootstrap("aarch64", version)
-        }
     }
 }
 
