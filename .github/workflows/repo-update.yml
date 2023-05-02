@@ -32,6 +32,8 @@ jobs:
         rm -fr */
         cd ../termux-app-sync
         cp -r * ../termux-app
+        cd ../termux-app
+        git branch -M main
         
         # Get list pkg
         info "Get list pkg"
