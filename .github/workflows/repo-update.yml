@@ -33,7 +33,6 @@ jobs:
         cd ../termux-app-sync
         cp -r * ../termux-app
         cd ../termux-app
-        git branch -M main
         
         # Get list pkg
         info "Get list pkg"
@@ -93,6 +92,7 @@ jobs:
         git add .
         git reset app art docs fastlane gradle terminal-emulator terminal-view termux-shared
         {
+          git branch -M main
           git commit -m "Update repo"
           git push origin main
         } || true
